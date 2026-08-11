@@ -1,0 +1,141 @@
+name: Sekisho
+
+options:
+  bundleIdPrefix: com.onikun94
+  deploymentTarget:
+    iOS: "17.0"
+
+settings:
+  base:
+    CURRENT_PROJECT_VERSION: 2026081102
+    MARKETING_VERSION: 0.1.0
+    SWIFT_VERSION: 5.0
+    IPHONEOS_DEPLOYMENT_TARGET: 17.0
+    TARGETED_DEVICE_FAMILY: "1"
+    ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    DEVELOPMENT_TEAM: UTD8GUH37B
+    CODE_SIGN_STYLE: Automatic
+    REVENUECAT_API_KEY: ""
+
+packages:
+  RevenueCat:
+    url: https://github.com/RevenueCat/purchases-ios-spm.git
+    from: 5.43.0
+
+targets:
+  Sekisho:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources/SekishoShared
+      - path: Sources/SekishoScreenTimeShared
+      - path: Sources/SekishoDeviceActivityReportShared
+      - path: Sources/SekishoApp
+    dependencies:
+      - package: RevenueCat
+        product: RevenueCat
+      - sdk: FamilyControls.framework
+      - sdk: ManagedSettings.framework
+      - sdk: DeviceActivity.framework
+      - sdk: UserNotifications.framework
+      - target: SekishoShieldConfigurationExtension
+        embed: true
+        codeSign: true
+      - target: SekishoShieldActionExtension
+        embed: true
+        codeSign: true
+      - target: SekishoDeviceActivityMonitorExtension
+        embed: true
+        codeSign: true
+      - target: SekishoDeviceActivityReportExtension
+        embed: true
+        codeSign: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.onikun94.sekisho
+        INFOPLIST_FILE: Config/Sekisho-Info.plist
+        CODE_SIGN_ENTITLEMENTS: Config/Sekisho.entitlements
+    attributes:
+      SystemCapabilities:
+        com.apple.InAppPurchase:
+          enabled: 1
+
+  SekishoShieldConfigurationExtension:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: Sources/SekishoShared
+      - path: Sources/SekishoShieldConfigurationExtension
+    dependencies:
+      - sdk: ManagedSettings.framework
+      - sdk: ManagedSettingsUI.framework
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.onikun94.sekisho.shield-configuration
+        INFOPLIST_FILE: Config/SekishoShieldConfigurationExtension-Info.plist
+        CODE_SIGN_ENTITLEMENTS: Config/SekishoShieldConfigurationExtension.entitlements
+        APPLICATION_EXTENSION_API_ONLY: YES
+
+  SekishoShieldActionExtension:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: Sources/SekishoShared
+      - path: Sources/SekishoShieldActionExtension
+    dependencies:
+      - sdk: ManagedSettings.framework
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.onikun94.sekisho.shield-action
+        INFOPLIST_FILE: Config/SekishoShieldActionExtension-Info.plist
+        CODE_SIGN_ENTITLEMENTS: Config/SekishoShieldActionExtension.entitlements
+        APPLICATION_EXTENSION_API_ONLY: YES
+
+  SekishoDeviceActivityMonitorExtension:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: Sources/SekishoShared
+      - path: Sources/SekishoScreenTimeShared
+      - path: Sources/SekishoDeviceActivityMonitorExtension
+    dependencies:
+      - sdk: DeviceActivity.framework
+      - sdk: FamilyControls.framework
+      - sdk: ManagedSettings.framework
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.onikun94.sekisho.device-activity-monitor
+        INFOPLIST_FILE: Config/SekishoDeviceActivityMonitorExtension-Info.plist
+        CODE_SIGN_ENTITLEMENTS: Config/SekishoDeviceActivityMonitorExtension.entitlements
+        APPLICATION_EXTENSION_API_ONLY: YES
+
+  SekishoDeviceActivityReportExtension:
+    type: extensionkit-extension
+    platform: iOS
+    sources:
+      - path: Sources/SekishoScreenTimeShared/ScreenTimeLimitIdentifiers.swift
+      - path: Sources/SekishoDeviceActivityReportShared
+      - path: Sources/SekishoDeviceActivityReportExtension
+    dependencies:
+      - sdk: DeviceActivity.framework
+      - sdk: ExtensionKit.framework
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.onikun94.sekisho.device-activity-report
+        INFOPLIST_FILE: Config/SekishoDeviceActivityReportExtension-Info.plist
+        CODE_SIGN_ENTITLEMENTS: Config/SekishoDeviceActivityReportExtension.entitlements
+        APPLICATION_EXTENSION_API_ONLY: YES
+
+schemes:
+  Sekisho:
+    build:
+      targets:
+        Sekisho: all
+        SekishoShieldConfigurationExtension: all
+        SekishoShieldActionExtension: all
+        SekishoDeviceActivityMonitorExtension: all
+        SekishoDeviceActivityReportExtension: all
+    run:
+      config: Debug
+    test:
+      config: Debug

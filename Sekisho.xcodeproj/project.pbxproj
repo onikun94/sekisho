@@ -1,0 +1,1035 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01EE84D572D7CC2965D8E25D /* TodayUsageReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EDC3DF2E7A6D961EB4C34 /* TodayUsageReport.swift */; };
+		05987799460E435C916A55E6 /* FocusSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52906C93CBAAEA7C2B81B3FF /* FocusSessionView.swift */; };
+		0ACDC59A9DC8F7552C812388 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E930353723B29188EB24FB25 /* DeviceActivity.framework */; };
+		1A12DEC3D951A0D161494D8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184760B1ED09595F869DDBB5 /* Assets.xcassets */; };
+		1B3EC3D614A4FE1AAA14106F /* SharedShieldSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14189C17D9E20EC0E606105B /* SharedShieldSnapshot.swift */; };
+		27D915ADA5209C840D31BB58 /* MascotStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF793DBBFDBB9128C16BF8 /* MascotStyle.swift */; };
+		29AA29E7350429F1E9A88C5F /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0A130A924E15A4C49B7EF1 /* ManagedSettings.framework */; };
+		381C078AAAF666F1EF93A28B /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377BE1FA11C1DD2117D2751D /* ShieldConfigurationExtension.swift */; };
+		3C0EDAA42EA3BFC3953543A6 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3333FAE98C8DF153445273 /* AppModel.swift */; };
+		3C2F199E2364BEC7B063FC3A /* DeviceActivityReportContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6DD2583C4D786546345812 /* DeviceActivityReportContext.swift */; };
+		3EE90A62B928F36B53966C56 /* SharedShieldSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14189C17D9E20EC0E606105B /* SharedShieldSnapshot.swift */; };
+		43926D5BF03832226490E5B3 /* DefaultBlockedWebDomains.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A3FA68693ED0E71FB5429 /* DefaultBlockedWebDomains.swift */; };
+		48AFEED71FD658B2D053AB54 /* FamilyActivitySelectionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38645DC56E9D4FD93220D647 /* FamilyActivitySelectionStore.swift */; };
+		494706E58F193C01983F1F4A /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ECE048B079B78FCDB4052D /* DesignSystem.swift */; };
+		4F38F78A469D53FAA32C42B4 /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF038A7AAFFEBA2C1ED6C8 /* FamilyControls.framework */; };
+		501ACE70105AE2BF00AFD6F3 /* DefaultBlockedWebDomains.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A3FA68693ED0E71FB5429 /* DefaultBlockedWebDomains.swift */; };
+		548A76FBBEE60774FFAAA3C7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3C45FF64C21B0FD040FBD /* SettingsView.swift */; };
+		5572532096E100FB9201889B /* ScreenTimeLimitIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07075E2FFCDB21C739B06B65 /* ScreenTimeLimitIdentifiers.swift */; };
+		5A47A258FD46121B5AA49A58 /* TodayUsageReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805A4D895D85DA423D04975A /* TodayUsageReportView.swift */; };
+		62E0607581F7541CF704806B /* UsageLimitSettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB83E4D94AE8BDA00ED1EC4 /* UsageLimitSettingsStore.swift */; };
+		6B01D48201D59FF609189E26 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F26363D661A04B88FC6476 /* AppRootView.swift */; };
+		74F5465855A96B4798C0670F /* SekishoDeviceActivityMonitorExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B41C57091ABC8C010C6EC5FA /* SekishoDeviceActivityMonitorExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7E7DBE99BB0F6F3B4760568D /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95914DBFCC2921BF4D47746B /* UserNotifications.framework */; };
+		85586BA4F09EA1C83F922A52 /* MascotWardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B1F35CEF18B1358B164AE4 /* MascotWardrobeView.swift */; };
+		858B19CB5167454B1CCAEEA3 /* SharedShieldSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14189C17D9E20EC0E606105B /* SharedShieldSnapshot.swift */; };
+		85956B50B65DA79217DFA67C /* FamilyActivitySelectionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38645DC56E9D4FD93220D647 /* FamilyActivitySelectionStore.swift */; };
+		87199F938F18CD91F8F7AA32 /* LocalNotificationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD268B91519169F66B0E1390 /* LocalNotificationClient.swift */; };
+		8B506D201C8F27D6133F9BC4 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E930353723B29188EB24FB25 /* DeviceActivity.framework */; };
+		8EC82AB11BA7184699C0E9CE /* SekishoShieldActionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B19E3724E51DC8EF81EFDE7D /* SekishoShieldActionExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FDC382D5ABD1542128DA9C4 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0A130A924E15A4C49B7EF1 /* ManagedSettings.framework */; };
+		9316747FD020270807893EB7 /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF038A7AAFFEBA2C1ED6C8 /* FamilyControls.framework */; };
+		95C71DFDB5623BCF91BB60F7 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = E6428468553472D55DE378E3 /* RevenueCat */; };
+		95D2A812694F3F75BDAFAA7D /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA3B7443F5A168072FD6B6A /* ManagedSettingsUI.framework */; };
+		95F65F1E109D3C73B20833B8 /* DeviceActivityReportContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6DD2583C4D786546345812 /* DeviceActivityReportContext.swift */; };
+		98389C65D1EFC512708D80C2 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E930353723B29188EB24FB25 /* DeviceActivity.framework */; };
+		9B89B05118C25FC827971D15 /* ShieldActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5379173DC0E0B199C61EB58 /* ShieldActionExtension.swift */; };
+		9D1365797398547D9FBD0B14 /* SekishoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9669C1D7B03B00F3A8362A /* SekishoApp.swift */; };
+		9E01B0F044A522D72EBC977F /* ScreenTimeLimitIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07075E2FFCDB21C739B06B65 /* ScreenTimeLimitIdentifiers.swift */; };
+		9E12A8166B35C6F32302F750 /* SekishoShieldConfigurationExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 28B5A8F5D99BE5DB30A0A3F5 /* SekishoShieldConfigurationExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABF44B1FAED9264DB56967CC /* AppModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95941C0CEB177905A50A6F50 /* AppModels.swift */; };
+		BAD27114823248B63A385596 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0A130A924E15A4C49B7EF1 /* ManagedSettings.framework */; };
+		C05E1C3E0345EAE0BF836C41 /* UsageLimitSettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB83E4D94AE8BDA00ED1EC4 /* UsageLimitSettingsStore.swift */; };
+		C533F49DBAC770CE4E356E0F /* ScreenTimeLimitIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07075E2FFCDB21C739B06B65 /* ScreenTimeLimitIdentifiers.swift */; };
+		C8A38D600249D732B3F0FDBC /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0A130A924E15A4C49B7EF1 /* ManagedSettings.framework */; };
+		CBF2802EB42AB64B04F90376 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3AED4CFC432847687A94 /* RulesView.swift */; };
+		D2D1B541F60DCA9C8E4DD06F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B493D8FBAD92D6C7FA22EF /* HomeView.swift */; };
+		D3C01E3D671F4883131992E5 /* ScreenTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DF5CE2151BAE0947190FB4 /* ScreenTimeController.swift */; };
+		D6724A13E77EB29166E4BD06 /* SekishoDeviceActivityReportExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BFB63279B1E69D9F507B73 /* SekishoDeviceActivityReportExtension.swift */; };
+		D90C0607113651EFAE813A96 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2EF832E6CAD69AA9460A1D /* PurchaseManager.swift */; };
+		DA53C84CB7775C9F710EF95A /* SekishoProView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F74534F770EA6AECF73765 /* SekishoProView.swift */; };
+		DABAF954B4DD70BCC5C7AB8C /* SharedShieldSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14189C17D9E20EC0E606105B /* SharedShieldSnapshot.swift */; };
+		E056C177FCDA1236DD16E873 /* ExtensionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19D0FBF117273C2906CA0AF /* ExtensionKit.framework */; };
+		E1921D445A5A4849D832FC47 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C1C8B4943D0AC1356B7FC4 /* DeviceActivityMonitorExtension.swift */; };
+		F5CF9A575176B215BE0A6004 /* SekishoDeviceActivityReportExtension.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = D9608A51A267123FF86F9A16 /* SekishoDeviceActivityReportExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C10A576AC15B78A14F468F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7641F57D4AA3C5376B0C7329 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 159CF1D15F3A1EBF50024593;
+			remoteInfo = SekishoShieldConfigurationExtension;
+		};
+		A5B49E1F7BA660ABFB6B13AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7641F57D4AA3C5376B0C7329 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31FDD3DE69EFBA13A3EBBB22;
+			remoteInfo = SekishoDeviceActivityMonitorExtension;
+		};
+		C6F54D9016B4268BE2D1D46B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7641F57D4AA3C5376B0C7329 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FDB5641155E74D14EE8654E;
+			remoteInfo = SekishoDeviceActivityReportExtension;
+		};
+		CE822D6BA1F4787C1B7C3B7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7641F57D4AA3C5376B0C7329 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0EBFC1B8881027C7CC5CC04;
+			remoteInfo = SekishoShieldActionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		67FBB5492DA94C97DF607C7D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9E12A8166B35C6F32302F750 /* SekishoShieldConfigurationExtension.appex in Embed Foundation Extensions */,
+				8EC82AB11BA7184699C0E9CE /* SekishoShieldActionExtension.appex in Embed Foundation Extensions */,
+				74F5465855A96B4798C0670F /* SekishoDeviceActivityMonitorExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FF63300685195A4008CFEC0 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				F5CF9A575176B215BE0A6004 /* SekishoDeviceActivityReportExtension.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		02F26363D661A04B88FC6476 /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
+		07075E2FFCDB21C739B06B65 /* ScreenTimeLimitIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeLimitIdentifiers.swift; sourceTree = "<group>"; };
+		0A9669C1D7B03B00F3A8362A /* SekishoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SekishoApp.swift; sourceTree = "<group>"; };
+		10903960B10BF603DF761267 /* Sekisho.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Sekisho.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14189C17D9E20EC0E606105B /* SharedShieldSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedShieldSnapshot.swift; sourceTree = "<group>"; };
+		16DF5CE2151BAE0947190FB4 /* ScreenTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeController.swift; sourceTree = "<group>"; };
+		184760B1ED09595F869DDBB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28B5A8F5D99BE5DB30A0A3F5 /* SekishoShieldConfigurationExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = SekishoShieldConfigurationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B2EF832E6CAD69AA9460A1D /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		377BE1FA11C1DD2117D2751D /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
+		38645DC56E9D4FD93220D647 /* FamilyActivitySelectionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyActivitySelectionStore.swift; sourceTree = "<group>"; };
+		3C3333FAE98C8DF153445273 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		3CA3B7443F5A168072FD6B6A /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = System/Library/Frameworks/ManagedSettingsUI.framework; sourceTree = SDKROOT; };
+		43CF038A7AAFFEBA2C1ED6C8 /* FamilyControls.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FamilyControls.framework; path = System/Library/Frameworks/FamilyControls.framework; sourceTree = SDKROOT; };
+		46C1C8B4943D0AC1356B7FC4 /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
+		4AFF793DBBFDBB9128C16BF8 /* MascotStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotStyle.swift; sourceTree = "<group>"; };
+		52906C93CBAAEA7C2B81B3FF /* FocusSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSessionView.swift; sourceTree = "<group>"; };
+		5C0A130A924E15A4C49B7EF1 /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
+		5FB83E4D94AE8BDA00ED1EC4 /* UsageLimitSettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageLimitSettingsStore.swift; sourceTree = "<group>"; };
+		63EC3AED4CFC432847687A94 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
+		67ECE048B079B78FCDB4052D /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		805A4D895D85DA423D04975A /* TodayUsageReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayUsageReportView.swift; sourceTree = "<group>"; };
+		95914DBFCC2921BF4D47746B /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		95941C0CEB177905A50A6F50 /* AppModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModels.swift; sourceTree = "<group>"; };
+		AD268B91519169F66B0E1390 /* LocalNotificationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationClient.swift; sourceTree = "<group>"; };
+		B19D0FBF117273C2906CA0AF /* ExtensionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExtensionKit.framework; path = System/Library/Frameworks/ExtensionKit.framework; sourceTree = SDKROOT; };
+		B19E3724E51DC8EF81EFDE7D /* SekishoShieldActionExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = SekishoShieldActionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B41C57091ABC8C010C6EC5FA /* SekishoDeviceActivityMonitorExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = SekishoDeviceActivityMonitorExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B1F35CEF18B1358B164AE4 /* MascotWardrobeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotWardrobeView.swift; sourceTree = "<group>"; };
+		B75EDC3DF2E7A6D961EB4C34 /* TodayUsageReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayUsageReport.swift; sourceTree = "<group>"; };
+		B9BFB63279B1E69D9F507B73 /* SekishoDeviceActivityReportExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SekishoDeviceActivityReportExtension.swift; sourceTree = "<group>"; };
+		B9C3C45FF64C21B0FD040FBD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D4F74534F770EA6AECF73765 /* SekishoProView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SekishoProView.swift; sourceTree = "<group>"; };
+		D5379173DC0E0B199C61EB58 /* ShieldActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldActionExtension.swift; sourceTree = "<group>"; };
+		D9608A51A267123FF86F9A16 /* SekishoDeviceActivityReportExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = SekishoDeviceActivityReportExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC6DD2583C4D786546345812 /* DeviceActivityReportContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityReportContext.swift; sourceTree = "<group>"; };
+		E3B493D8FBAD92D6C7FA22EF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E49A3FA68693ED0E71FB5429 /* DefaultBlockedWebDomains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBlockedWebDomains.swift; sourceTree = "<group>"; };
+		E930353723B29188EB24FB25 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62344683823AF11B67213B76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FDC382D5ABD1542128DA9C4 /* ManagedSettings.framework in Frameworks */,
+				95D2A812694F3F75BDAFAA7D /* ManagedSettingsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A90A61539874ED12E5A733EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98389C65D1EFC512708D80C2 /* DeviceActivity.framework in Frameworks */,
+				E056C177FCDA1236DD16E873 /* ExtensionKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE3E66ED85C86EB33D37495C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ACDC59A9DC8F7552C812388 /* DeviceActivity.framework in Frameworks */,
+				4F38F78A469D53FAA32C42B4 /* FamilyControls.framework in Frameworks */,
+				C8A38D600249D732B3F0FDBC /* ManagedSettings.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5CD025FAF82813CA320844C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAD27114823248B63A385596 /* ManagedSettings.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4FAF1A42BCF16B3D6128642 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95C71DFDB5623BCF91BB60F7 /* RevenueCat in Frameworks */,
+				9316747FD020270807893EB7 /* FamilyControls.framework in Frameworks */,
+				29AA29E7350429F1E9A88C5F /* ManagedSettings.framework in Frameworks */,
+				8B506D201C8F27D6133F9BC4 /* DeviceActivity.framework in Frameworks */,
+				7E7DBE99BB0F6F3B4760568D /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00F8877C4DF013D620E535ED /* SekishoDeviceActivityReportExtension */ = {
+			isa = PBXGroup;
+			children = (
+				B9BFB63279B1E69D9F507B73 /* SekishoDeviceActivityReportExtension.swift */,
+				B75EDC3DF2E7A6D961EB4C34 /* TodayUsageReport.swift */,
+				805A4D895D85DA423D04975A /* TodayUsageReportView.swift */,
+			);
+			name = SekishoDeviceActivityReportExtension;
+			path = Sources/SekishoDeviceActivityReportExtension;
+			sourceTree = "<group>";
+		};
+		1006301EA1B13C44567232E7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AD268B91519169F66B0E1390 /* LocalNotificationClient.swift */,
+				2B2EF832E6CAD69AA9460A1D /* PurchaseManager.swift */,
+				16DF5CE2151BAE0947190FB4 /* ScreenTimeController.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1AD9CF9AB6868125FEB0BF50 /* SekishoDeviceActivityMonitorExtension */ = {
+			isa = PBXGroup;
+			children = (
+				46C1C8B4943D0AC1356B7FC4 /* DeviceActivityMonitorExtension.swift */,
+			);
+			name = SekishoDeviceActivityMonitorExtension;
+			path = Sources/SekishoDeviceActivityMonitorExtension;
+			sourceTree = "<group>";
+		};
+		2E919D28D52FC79364DE2541 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10903960B10BF603DF761267 /* Sekisho.app */,
+				B41C57091ABC8C010C6EC5FA /* SekishoDeviceActivityMonitorExtension.appex */,
+				D9608A51A267123FF86F9A16 /* SekishoDeviceActivityReportExtension.appex */,
+				B19E3724E51DC8EF81EFDE7D /* SekishoShieldActionExtension.appex */,
+				28B5A8F5D99BE5DB30A0A3F5 /* SekishoShieldConfigurationExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37709D53DA23CC98639F2141 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				184760B1ED09595F869DDBB5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3D6E6559116A30764DD18F73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C3333FAE98C8DF153445273 /* AppModel.swift */,
+				95941C0CEB177905A50A6F50 /* AppModels.swift */,
+				4AFF793DBBFDBB9128C16BF8 /* MascotStyle.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		533C581776AE3238669B1921 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E930353723B29188EB24FB25 /* DeviceActivity.framework */,
+				B19D0FBF117273C2906CA0AF /* ExtensionKit.framework */,
+				43CF038A7AAFFEBA2C1ED6C8 /* FamilyControls.framework */,
+				5C0A130A924E15A4C49B7EF1 /* ManagedSettings.framework */,
+				3CA3B7443F5A168072FD6B6A /* ManagedSettingsUI.framework */,
+				95914DBFCC2921BF4D47746B /* UserNotifications.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65B06880FC4985D7817698DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				02F26363D661A04B88FC6476 /* AppRootView.swift */,
+				67ECE048B079B78FCDB4052D /* DesignSystem.swift */,
+				52906C93CBAAEA7C2B81B3FF /* FocusSessionView.swift */,
+				E3B493D8FBAD92D6C7FA22EF /* HomeView.swift */,
+				B4B1F35CEF18B1358B164AE4 /* MascotWardrobeView.swift */,
+				63EC3AED4CFC432847687A94 /* RulesView.swift */,
+				D4F74534F770EA6AECF73765 /* SekishoProView.swift */,
+				B9C3C45FF64C21B0FD040FBD /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6D2EDC523A2E1A0F5A691F30 /* SekishoScreenTimeShared */ = {
+			isa = PBXGroup;
+			children = (
+				E49A3FA68693ED0E71FB5429 /* DefaultBlockedWebDomains.swift */,
+				38645DC56E9D4FD93220D647 /* FamilyActivitySelectionStore.swift */,
+				07075E2FFCDB21C739B06B65 /* ScreenTimeLimitIdentifiers.swift */,
+			);
+			name = SekishoScreenTimeShared;
+			path = Sources/SekishoScreenTimeShared;
+			sourceTree = "<group>";
+		};
+		7830D43B23250DCEEE3E541A = {
+			isa = PBXGroup;
+			children = (
+				E7CA10998522A7F43CDF3261 /* SekishoApp */,
+				1AD9CF9AB6868125FEB0BF50 /* SekishoDeviceActivityMonitorExtension */,
+				00F8877C4DF013D620E535ED /* SekishoDeviceActivityReportExtension */,
+				F9A728943EE17F8F2406E11B /* SekishoDeviceActivityReportShared */,
+				6D2EDC523A2E1A0F5A691F30 /* SekishoScreenTimeShared */,
+				F97C7416682FE2DEDB3F2937 /* SekishoShared */,
+				CD57FAAE00F5DB209D28E6A8 /* SekishoShieldActionExtension */,
+				F5B8DA7AB5888A55B2956890 /* SekishoShieldConfigurationExtension */,
+				533C581776AE3238669B1921 /* Frameworks */,
+				2E919D28D52FC79364DE2541 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD57FAAE00F5DB209D28E6A8 /* SekishoShieldActionExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D5379173DC0E0B199C61EB58 /* ShieldActionExtension.swift */,
+			);
+			name = SekishoShieldActionExtension;
+			path = Sources/SekishoShieldActionExtension;
+			sourceTree = "<group>";
+		};
+		E7CA10998522A7F43CDF3261 /* SekishoApp */ = {
+			isa = PBXGroup;
+			children = (
+				0A9669C1D7B03B00F3A8362A /* SekishoApp.swift */,
+				3D6E6559116A30764DD18F73 /* Models */,
+				37709D53DA23CC98639F2141 /* Resources */,
+				1006301EA1B13C44567232E7 /* Services */,
+				65B06880FC4985D7817698DC /* Views */,
+			);
+			name = SekishoApp;
+			path = Sources/SekishoApp;
+			sourceTree = "<group>";
+		};
+		F5B8DA7AB5888A55B2956890 /* SekishoShieldConfigurationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				377BE1FA11C1DD2117D2751D /* ShieldConfigurationExtension.swift */,
+			);
+			name = SekishoShieldConfigurationExtension;
+			path = Sources/SekishoShieldConfigurationExtension;
+			sourceTree = "<group>";
+		};
+		F97C7416682FE2DEDB3F2937 /* SekishoShared */ = {
+			isa = PBXGroup;
+			children = (
+				14189C17D9E20EC0E606105B /* SharedShieldSnapshot.swift */,
+			);
+			name = SekishoShared;
+			path = Sources/SekishoShared;
+			sourceTree = "<group>";
+		};
+		F9A728943EE17F8F2406E11B /* SekishoDeviceActivityReportShared */ = {
+			isa = PBXGroup;
+			children = (
+				DC6DD2583C4D786546345812 /* DeviceActivityReportContext.swift */,
+				5FB83E4D94AE8BDA00ED1EC4 /* UsageLimitSettingsStore.swift */,
+			);
+			name = SekishoDeviceActivityReportShared;
+			path = Sources/SekishoDeviceActivityReportShared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		159CF1D15F3A1EBF50024593 /* SekishoShieldConfigurationExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 609E671E4CDA7631AA309610 /* Build configuration list for PBXNativeTarget "SekishoShieldConfigurationExtension" */;
+			buildPhases = (
+				A1DAA7BC32066C849D83F48B /* Sources */,
+				62344683823AF11B67213B76 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SekishoShieldConfigurationExtension;
+			packageProductDependencies = (
+			);
+			productName = SekishoShieldConfigurationExtension;
+			productReference = 28B5A8F5D99BE5DB30A0A3F5 /* SekishoShieldConfigurationExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		1FDB5641155E74D14EE8654E /* SekishoDeviceActivityReportExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FF4010C836CEAB37F957479 /* Build configuration list for PBXNativeTarget "SekishoDeviceActivityReportExtension" */;
+			buildPhases = (
+				949093960B0AD731C394A89F /* Sources */,
+				A90A61539874ED12E5A733EF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SekishoDeviceActivityReportExtension;
+			packageProductDependencies = (
+			);
+			productName = SekishoDeviceActivityReportExtension;
+			productReference = D9608A51A267123FF86F9A16 /* SekishoDeviceActivityReportExtension.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
+		31FDD3DE69EFBA13A3EBBB22 /* SekishoDeviceActivityMonitorExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B71E2C59E4AA4F909F9A2CCB /* Build configuration list for PBXNativeTarget "SekishoDeviceActivityMonitorExtension" */;
+			buildPhases = (
+				C91415CE9678F2996B38BDA2 /* Sources */,
+				CE3E66ED85C86EB33D37495C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SekishoDeviceActivityMonitorExtension;
+			packageProductDependencies = (
+			);
+			productName = SekishoDeviceActivityMonitorExtension;
+			productReference = B41C57091ABC8C010C6EC5FA /* SekishoDeviceActivityMonitorExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		4061D03778926FA20F6CC718 /* Sekisho */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 850621607CDE58BD0797B853 /* Build configuration list for PBXNativeTarget "Sekisho" */;
+			buildPhases = (
+				5AD6CE1341F4143D2127F138 /* Sources */,
+				78DFF74D37A13ECC41582B32 /* Resources */,
+				F4FAF1A42BCF16B3D6128642 /* Frameworks */,
+				67FBB5492DA94C97DF607C7D /* Embed Foundation Extensions */,
+				9FF63300685195A4008CFEC0 /* Embed ExtensionKit Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E02FCD4959F09A5096070342 /* PBXTargetDependency */,
+				800E9F5111EF6E719F7EF332 /* PBXTargetDependency */,
+				87EBF975F20B3DC595F6DB67 /* PBXTargetDependency */,
+				5306984672EBC1CA7F19F6FF /* PBXTargetDependency */,
+			);
+			name = Sekisho;
+			packageProductDependencies = (
+				E6428468553472D55DE378E3 /* RevenueCat */,
+			);
+			productName = Sekisho;
+			productReference = 10903960B10BF603DF761267 /* Sekisho.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0EBFC1B8881027C7CC5CC04 /* SekishoShieldActionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F71CB51B67B0E2FA8B5EB45 /* Build configuration list for PBXNativeTarget "SekishoShieldActionExtension" */;
+			buildPhases = (
+				2CFF47544DA910BF75EDCC2A /* Sources */,
+				E5CD025FAF82813CA320844C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SekishoShieldActionExtension;
+			packageProductDependencies = (
+			);
+			productName = SekishoShieldActionExtension;
+			productReference = B19E3724E51DC8EF81EFDE7D /* SekishoShieldActionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7641F57D4AA3C5376B0C7329 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					159CF1D15F3A1EBF50024593 = {
+						DevelopmentTeam = UTD8GUH37B;
+						ProvisioningStyle = Automatic;
+					};
+					1FDB5641155E74D14EE8654E = {
+						DevelopmentTeam = UTD8GUH37B;
+						ProvisioningStyle = Automatic;
+					};
+					31FDD3DE69EFBA13A3EBBB22 = {
+						DevelopmentTeam = UTD8GUH37B;
+						ProvisioningStyle = Automatic;
+					};
+					4061D03778926FA20F6CC718 = {
+						DevelopmentTeam = UTD8GUH37B;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
+					};
+					B0EBFC1B8881027C7CC5CC04 = {
+						DevelopmentTeam = UTD8GUH37B;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 78E003D0B78FA2D08CAB6D6D /* Build configuration list for PBXProject "Sekisho" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7830D43B23250DCEEE3E541A;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BD2C15E6D81D5F669BCD3EF4 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
+			);
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4061D03778926FA20F6CC718 /* Sekisho */,
+				31FDD3DE69EFBA13A3EBBB22 /* SekishoDeviceActivityMonitorExtension */,
+				1FDB5641155E74D14EE8654E /* SekishoDeviceActivityReportExtension */,
+				B0EBFC1B8881027C7CC5CC04 /* SekishoShieldActionExtension */,
+				159CF1D15F3A1EBF50024593 /* SekishoShieldConfigurationExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78DFF74D37A13ECC41582B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A12DEC3D951A0D161494D8D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CFF47544DA910BF75EDCC2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B3EC3D614A4FE1AAA14106F /* SharedShieldSnapshot.swift in Sources */,
+				9B89B05118C25FC827971D15 /* ShieldActionExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD6CE1341F4143D2127F138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C0EDAA42EA3BFC3953543A6 /* AppModel.swift in Sources */,
+				ABF44B1FAED9264DB56967CC /* AppModels.swift in Sources */,
+				6B01D48201D59FF609189E26 /* AppRootView.swift in Sources */,
+				43926D5BF03832226490E5B3 /* DefaultBlockedWebDomains.swift in Sources */,
+				494706E58F193C01983F1F4A /* DesignSystem.swift in Sources */,
+				95F65F1E109D3C73B20833B8 /* DeviceActivityReportContext.swift in Sources */,
+				85956B50B65DA79217DFA67C /* FamilyActivitySelectionStore.swift in Sources */,
+				05987799460E435C916A55E6 /* FocusSessionView.swift in Sources */,
+				D2D1B541F60DCA9C8E4DD06F /* HomeView.swift in Sources */,
+				87199F938F18CD91F8F7AA32 /* LocalNotificationClient.swift in Sources */,
+				27D915ADA5209C840D31BB58 /* MascotStyle.swift in Sources */,
+				85586BA4F09EA1C83F922A52 /* MascotWardrobeView.swift in Sources */,
+				D90C0607113651EFAE813A96 /* PurchaseManager.swift in Sources */,
+				CBF2802EB42AB64B04F90376 /* RulesView.swift in Sources */,
+				D3C01E3D671F4883131992E5 /* ScreenTimeController.swift in Sources */,
+				5572532096E100FB9201889B /* ScreenTimeLimitIdentifiers.swift in Sources */,
+				9D1365797398547D9FBD0B14 /* SekishoApp.swift in Sources */,
+				DA53C84CB7775C9F710EF95A /* SekishoProView.swift in Sources */,
+				548A76FBBEE60774FFAAA3C7 /* SettingsView.swift in Sources */,
+				3EE90A62B928F36B53966C56 /* SharedShieldSnapshot.swift in Sources */,
+				C05E1C3E0345EAE0BF836C41 /* UsageLimitSettingsStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		949093960B0AD731C394A89F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C2F199E2364BEC7B063FC3A /* DeviceActivityReportContext.swift in Sources */,
+				C533F49DBAC770CE4E356E0F /* ScreenTimeLimitIdentifiers.swift in Sources */,
+				D6724A13E77EB29166E4BD06 /* SekishoDeviceActivityReportExtension.swift in Sources */,
+				01EE84D572D7CC2965D8E25D /* TodayUsageReport.swift in Sources */,
+				5A47A258FD46121B5AA49A58 /* TodayUsageReportView.swift in Sources */,
+				62E0607581F7541CF704806B /* UsageLimitSettingsStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1DAA7BC32066C849D83F48B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DABAF954B4DD70BCC5C7AB8C /* SharedShieldSnapshot.swift in Sources */,
+				381C078AAAF666F1EF93A28B /* ShieldConfigurationExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C91415CE9678F2996B38BDA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				501ACE70105AE2BF00AFD6F3 /* DefaultBlockedWebDomains.swift in Sources */,
+				E1921D445A5A4849D832FC47 /* DeviceActivityMonitorExtension.swift in Sources */,
+				48AFEED71FD658B2D053AB54 /* FamilyActivitySelectionStore.swift in Sources */,
+				9E01B0F044A522D72EBC977F /* ScreenTimeLimitIdentifiers.swift in Sources */,
+				858B19CB5167454B1CCAEEA3 /* SharedShieldSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5306984672EBC1CA7F19F6FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FDB5641155E74D14EE8654E /* SekishoDeviceActivityReportExtension */;
+			targetProxy = C6F54D9016B4268BE2D1D46B /* PBXContainerItemProxy */;
+		};
+		800E9F5111EF6E719F7EF332 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0EBFC1B8881027C7CC5CC04 /* SekishoShieldActionExtension */;
+			targetProxy = CE822D6BA1F4787C1B7C3B7F /* PBXContainerItemProxy */;
+		};
+		87EBF975F20B3DC595F6DB67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31FDD3DE69EFBA13A3EBBB22 /* SekishoDeviceActivityMonitorExtension */;
+			targetProxy = A5B49E1F7BA660ABFB6B13AD /* PBXContainerItemProxy */;
+		};
+		E02FCD4959F09A5096070342 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 159CF1D15F3A1EBF50024593 /* SekishoShieldConfigurationExtension */;
+			targetProxy = 1C10A576AC15B78A14F468F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		461B0E8BF38F536A74577014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/SekishoShieldConfigurationExtension.entitlements;
+				INFOPLIST_FILE = "Config/SekishoShieldConfigurationExtension-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onikun94.sekisho.shield-configuration";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4C754467545F0E4C882A3096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2026081102;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UTD8GUH37B;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REVENUECAT_API_KEY = "";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6A3727616DC3F51FA94E9637 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/SekishoShieldActionExtension.entitlements;
+				INFOPLIST_FILE = "Config/SekishoShieldActionExtension-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onikun94.sekisho.shield-action";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6DA4E56ED2B05346EDE33722 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2026081102;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UTD8GUH37B;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REVENUECAT_API_KEY = "";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		83B730771E0F2A3BD46B3505 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/Sekisho.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Config/Sekisho-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.onikun94.sekisho;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9B174D0A2DEB216ACF6CB369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/SekishoShieldActionExtension.entitlements;
+				INFOPLIST_FILE = "Config/SekishoShieldActionExtension-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onikun94.sekisho.shield-action";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A1B065A95171E801C29D48C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/SekishoDeviceActivityMonitorExtension.entitlements;
+				INFOPLIST_FILE = "Config/SekishoDeviceActivityMonitorExtension-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onikun94.sekisho.device-activity-monitor";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A89A87FDA228E3E579EF9E60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/SekishoDeviceActivityReportExtension.entitlements;
+				INFOPLIST_FILE = "Config/SekishoDeviceActivityReportExtension-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onikun94.sekisho.device-activity-report";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B1A89233594096BED580204C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/SekishoDeviceActivityMonitorExtension.entitlements;
+				INFOPLIST_FILE = "Config/SekishoDeviceActivityMonitorExtension-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onikun94.sekisho.device-activity-monitor";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C5A5ACBFAC02A618A2B615CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Config/Sekisho.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Config/Sekisho-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.onikun94.sekisho;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E54169B29A56B7F79A1B0130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/SekishoDeviceActivityReportExtension.entitlements;
+				INFOPLIST_FILE = "Config/SekishoDeviceActivityReportExtension-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onikun94.sekisho.device-activity-report";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FBB263E7A9C62DA2DA7C6EFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/SekishoShieldConfigurationExtension.entitlements;
+				INFOPLIST_FILE = "Config/SekishoShieldConfigurationExtension-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onikun94.sekisho.shield-configuration";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FF4010C836CEAB37F957479 /* Build configuration list for PBXNativeTarget "SekishoDeviceActivityReportExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A89A87FDA228E3E579EF9E60 /* Debug */,
+				E54169B29A56B7F79A1B0130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		609E671E4CDA7631AA309610 /* Build configuration list for PBXNativeTarget "SekishoShieldConfigurationExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBB263E7A9C62DA2DA7C6EFF /* Debug */,
+				461B0E8BF38F536A74577014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		78E003D0B78FA2D08CAB6D6D /* Build configuration list for PBXProject "Sekisho" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C754467545F0E4C882A3096 /* Debug */,
+				6DA4E56ED2B05346EDE33722 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		850621607CDE58BD0797B853 /* Build configuration list for PBXNativeTarget "Sekisho" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5A5ACBFAC02A618A2B615CC /* Debug */,
+				83B730771E0F2A3BD46B3505 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8F71CB51B67B0E2FA8B5EB45 /* Build configuration list for PBXNativeTarget "SekishoShieldActionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A3727616DC3F51FA94E9637 /* Debug */,
+				9B174D0A2DEB216ACF6CB369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B71E2C59E4AA4F909F9A2CCB /* Build configuration list for PBXNativeTarget "SekishoDeviceActivityMonitorExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B065A95171E801C29D48C7 /* Debug */,
+				B1A89233594096BED580204C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD2C15E6D81D5F669BCD3EF4 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.43.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E6428468553472D55DE378E3 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD2C15E6D81D5F669BCD3EF4 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCat;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 7641F57D4AA3C5376B0C7329 /* Project object */;
+}
