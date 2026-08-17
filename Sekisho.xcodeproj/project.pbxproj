@@ -9,16 +9,22 @@
 /* Begin PBXBuildFile section */
 		01EE84D572D7CC2965D8E25D /* TodayUsageReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EDC3DF2E7A6D961EB4C34 /* TodayUsageReport.swift */; };
 		05987799460E435C916A55E6 /* FocusSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52906C93CBAAEA7C2B81B3FF /* FocusSessionView.swift */; };
+		09249A8F66832E36F940BB35 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0A130A924E15A4C49B7EF1 /* ManagedSettings.framework */; };
 		0ACDC59A9DC8F7552C812388 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E930353723B29188EB24FB25 /* DeviceActivity.framework */; };
+		17D882AF35F57FE0B749E847 /* SharedShieldSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14189C17D9E20EC0E606105B /* SharedShieldSnapshot.swift */; };
 		1A12DEC3D951A0D161494D8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184760B1ED09595F869DDBB5 /* Assets.xcassets */; };
+		1AD38B9C14931A1AA3F499A8 /* SekishoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD67E946FFF5738C3CC44BF /* SekishoAPIClient.swift */; };
 		1B3EC3D614A4FE1AAA14106F /* SharedShieldSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14189C17D9E20EC0E606105B /* SharedShieldSnapshot.swift */; };
 		27D915ADA5209C840D31BB58 /* MascotStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF793DBBFDBB9128C16BF8 /* MascotStyle.swift */; };
 		29AA29E7350429F1E9A88C5F /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0A130A924E15A4C49B7EF1 /* ManagedSettings.framework */; };
+		3744EB51191B0EBF8FB1F67C /* BackendSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01AB5464C4DBE239403665 /* BackendSessionManager.swift */; };
 		381C078AAAF666F1EF93A28B /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377BE1FA11C1DD2117D2751D /* ShieldConfigurationExtension.swift */; };
+		3A479BAB5B92ABDD2646DF28 /* SekishoWidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1343405422D0295FE0743 /* SekishoWidgetSnapshot.swift */; };
 		3C0EDAA42EA3BFC3953543A6 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3333FAE98C8DF153445273 /* AppModel.swift */; };
 		3C2F199E2364BEC7B063FC3A /* DeviceActivityReportContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6DD2583C4D786546345812 /* DeviceActivityReportContext.swift */; };
 		3EE90A62B928F36B53966C56 /* SharedShieldSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14189C17D9E20EC0E606105B /* SharedShieldSnapshot.swift */; };
 		43926D5BF03832226490E5B3 /* DefaultBlockedWebDomains.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A3FA68693ED0E71FB5429 /* DefaultBlockedWebDomains.swift */; };
+		4780F64FE2E571CC8F08E25B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FA7E5C4B5890DBB348AAE0 /* WidgetKit.framework */; };
 		48AFEED71FD658B2D053AB54 /* FamilyActivitySelectionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38645DC56E9D4FD93220D647 /* FamilyActivitySelectionStore.swift */; };
 		494706E58F193C01983F1F4A /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ECE048B079B78FCDB4052D /* DesignSystem.swift */; };
 		4F38F78A469D53FAA32C42B4 /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF038A7AAFFEBA2C1ED6C8 /* FamilyControls.framework */; };
@@ -26,41 +32,67 @@
 		548A76FBBEE60774FFAAA3C7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3C45FF64C21B0FD040FBD /* SettingsView.swift */; };
 		5572532096E100FB9201889B /* ScreenTimeLimitIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07075E2FFCDB21C739B06B65 /* ScreenTimeLimitIdentifiers.swift */; };
 		5A47A258FD46121B5AA49A58 /* TodayUsageReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805A4D895D85DA423D04975A /* TodayUsageReportView.swift */; };
+		5BC07AF5872875D1015453D1 /* TargetUsageLimitConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4A625E030A6447EEE3466 /* TargetUsageLimitConfiguration.swift */; };
+		5C5A7314D871234FF9B13711 /* SekishoWidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1343405422D0295FE0743 /* SekishoWidgetSnapshot.swift */; };
+		62ACC75BA84F58DD3DD67FE6 /* LiveSekishoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176400B44BF386D57CD60A73 /* LiveSekishoAPIClient.swift */; };
 		62E0607581F7541CF704806B /* UsageLimitSettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB83E4D94AE8BDA00ED1EC4 /* UsageLimitSettingsStore.swift */; };
 		6B01D48201D59FF609189E26 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F26363D661A04B88FC6476 /* AppRootView.swift */; };
+		6D2814D7016DB6F64C011241 /* FamilyActivitySelectionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38645DC56E9D4FD93220D647 /* FamilyActivitySelectionStore.swift */; };
+		72740CB9A1B27583A0B2C2F0 /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF038A7AAFFEBA2C1ED6C8 /* FamilyControls.framework */; };
+		746D2E33E5F5A642879B8D8A /* SekishoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D0D5849600679C07AD56E /* SekishoWidget.swift */; };
 		74F5465855A96B4798C0670F /* SekishoDeviceActivityMonitorExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B41C57091ABC8C010C6EC5FA /* SekishoDeviceActivityMonitorExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		799A45423B1A299FF9AC8A94 /* SekishoAPIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63972B58CA6C5647AB1FB353 /* SekishoAPIModels.swift */; };
+		7D06E737DDDE6BEDB8ADBFF6 /* SekishoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 06F0529C2705CBE36DEBD9CB /* SekishoWidgetExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7E7DBE99BB0F6F3B4760568D /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95914DBFCC2921BF4D47746B /* UserNotifications.framework */; };
 		85586BA4F09EA1C83F922A52 /* MascotWardrobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B1F35CEF18B1358B164AE4 /* MascotWardrobeView.swift */; };
 		858B19CB5167454B1CCAEEA3 /* SharedShieldSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14189C17D9E20EC0E606105B /* SharedShieldSnapshot.swift */; };
 		85956B50B65DA79217DFA67C /* FamilyActivitySelectionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38645DC56E9D4FD93220D647 /* FamilyActivitySelectionStore.swift */; };
 		87199F938F18CD91F8F7AA32 /* LocalNotificationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD268B91519169F66B0E1390 /* LocalNotificationClient.swift */; };
+		8781091297F760D30CA49678 /* AppleSignInNonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40B50C7E5E39EBA78D7C7C7 /* AppleSignInNonce.swift */; };
+		87A1D7131051B62A5C91CA69 /* FamilyActivitySelectionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38645DC56E9D4FD93220D647 /* FamilyActivitySelectionStore.swift */; };
+		87F33F5BA3F050F62C167D99 /* KeychainTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CBB46652512FD5EACAB372 /* KeychainTokenStore.swift */; };
+		8941D672743A9C064E64BE1E /* SekishoWidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1343405422D0295FE0743 /* SekishoWidgetSnapshot.swift */; };
 		8B506D201C8F27D6133F9BC4 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E930353723B29188EB24FB25 /* DeviceActivity.framework */; };
 		8EC82AB11BA7184699C0E9CE /* SekishoShieldActionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B19E3724E51DC8EF81EFDE7D /* SekishoShieldActionExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8FDC382D5ABD1542128DA9C4 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0A130A924E15A4C49B7EF1 /* ManagedSettings.framework */; };
 		9316747FD020270807893EB7 /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF038A7AAFFEBA2C1ED6C8 /* FamilyControls.framework */; };
+		95AA1E586BA260754DCD5883 /* MockSekishoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF80FD138F3FA707D40B180D /* MockSekishoAPIClient.swift */; };
 		95C71DFDB5623BCF91BB60F7 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = E6428468553472D55DE378E3 /* RevenueCat */; };
 		95D2A812694F3F75BDAFAA7D /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA3B7443F5A168072FD6B6A /* ManagedSettingsUI.framework */; };
 		95F65F1E109D3C73B20833B8 /* DeviceActivityReportContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6DD2583C4D786546345812 /* DeviceActivityReportContext.swift */; };
 		98389C65D1EFC512708D80C2 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E930353723B29188EB24FB25 /* DeviceActivity.framework */; };
+		9A6B26A30DBB662A21AC94C6 /* LegalDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEBC9C4D6B388E8FAEE0D6 /* LegalDocumentView.swift */; };
 		9B89B05118C25FC827971D15 /* ShieldActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5379173DC0E0B199C61EB58 /* ShieldActionExtension.swift */; };
 		9D1365797398547D9FBD0B14 /* SekishoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9669C1D7B03B00F3A8362A /* SekishoApp.swift */; };
 		9E01B0F044A522D72EBC977F /* ScreenTimeLimitIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07075E2FFCDB21C739B06B65 /* ScreenTimeLimitIdentifiers.swift */; };
 		9E12A8166B35C6F32302F750 /* SekishoShieldConfigurationExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 28B5A8F5D99BE5DB30A0A3F5 /* SekishoShieldConfigurationExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A7A338FA51393D3E2A9B5DB3 /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF038A7AAFFEBA2C1ED6C8 /* FamilyControls.framework */; };
+		A93438208232EFF0D59EBBE0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FA7E5C4B5890DBB348AAE0 /* WidgetKit.framework */; };
+		A9C525D0E2598BB3C19F98D6 /* SharedShieldSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14189C17D9E20EC0E606105B /* SharedShieldSnapshot.swift */; };
+		AB72D3D219511EC0FB5CEE47 /* TargetUsageLimitConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4A625E030A6447EEE3466 /* TargetUsageLimitConfiguration.swift */; };
 		ABF44B1FAED9264DB56967CC /* AppModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95941C0CEB177905A50A6F50 /* AppModels.swift */; };
+		B09DA9FEC829530A76C92AA7 /* TargetUsageLimitConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4A625E030A6447EEE3466 /* TargetUsageLimitConfiguration.swift */; };
 		BAD27114823248B63A385596 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0A130A924E15A4C49B7EF1 /* ManagedSettings.framework */; };
 		C05E1C3E0345EAE0BF836C41 /* UsageLimitSettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB83E4D94AE8BDA00ED1EC4 /* UsageLimitSettingsStore.swift */; };
 		C533F49DBAC770CE4E356E0F /* ScreenTimeLimitIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07075E2FFCDB21C739B06B65 /* ScreenTimeLimitIdentifiers.swift */; };
 		C8A38D600249D732B3F0FDBC /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0A130A924E15A4C49B7EF1 /* ManagedSettings.framework */; };
 		CBF2802EB42AB64B04F90376 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC3AED4CFC432847687A94 /* RulesView.swift */; };
+		CDD5570AF3FD6D9538C2A388 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FA7E5C4B5890DBB348AAE0 /* WidgetKit.framework */; };
 		D2D1B541F60DCA9C8E4DD06F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B493D8FBAD92D6C7FA22EF /* HomeView.swift */; };
 		D3C01E3D671F4883131992E5 /* ScreenTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DF5CE2151BAE0947190FB4 /* ScreenTimeController.swift */; };
 		D6724A13E77EB29166E4BD06 /* SekishoDeviceActivityReportExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BFB63279B1E69D9F507B73 /* SekishoDeviceActivityReportExtension.swift */; };
+		D819A9EBF043BAC298E9E8DA /* SekishoWidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1343405422D0295FE0743 /* SekishoWidgetSnapshot.swift */; };
 		D90C0607113651EFAE813A96 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2EF832E6CAD69AA9460A1D /* PurchaseManager.swift */; };
 		DA53C84CB7775C9F710EF95A /* SekishoProView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F74534F770EA6AECF73765 /* SekishoProView.swift */; };
 		DABAF954B4DD70BCC5C7AB8C /* SharedShieldSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14189C17D9E20EC0E606105B /* SharedShieldSnapshot.swift */; };
+		DDB04F2EBDBD1D3491712810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184760B1ED09595F869DDBB5 /* Assets.xcassets */; };
 		E056C177FCDA1236DD16E873 /* ExtensionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19D0FBF117273C2906CA0AF /* ExtensionKit.framework */; };
+		E08A72E5B81CD5AA337158EF /* WeeklyRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D669B4FFA869D1131F0B962B /* WeeklyRulesView.swift */; };
 		E1921D445A5A4849D832FC47 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C1C8B4943D0AC1356B7FC4 /* DeviceActivityMonitorExtension.swift */; };
+		F39E59E7575E4FBBC602BDA7 /* sekisho-shield-mascot-limited.png in Resources */ = {isa = PBXBuildFile; fileRef = C543576471CEEEF1443D91CD /* sekisho-shield-mascot-limited.png */; };
 		F5CF9A575176B215BE0A6004 /* SekishoDeviceActivityReportExtension.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = D9608A51A267123FF86F9A16 /* SekishoDeviceActivityReportExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6A91A905A8CC8A8B3060CE9 /* SekishoWidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1343405422D0295FE0743 /* SekishoWidgetSnapshot.swift */; };
+		F87257CE4D74514A28277A4C /* ScreenTimeLimitIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07075E2FFCDB21C739B06B65 /* ScreenTimeLimitIdentifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +117,13 @@
 			remoteGlobalIDString = 1FDB5641155E74D14EE8654E;
 			remoteInfo = SekishoDeviceActivityReportExtension;
 		};
+		C7BCDA5D434D48A1748E8003 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7641F57D4AA3C5376B0C7329 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A104CCFD2DDD8B0BBE3D145;
+			remoteInfo = SekishoWidgetExtension;
+		};
 		CE822D6BA1F4787C1B7C3B7F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7641F57D4AA3C5376B0C7329 /* Project object */;
@@ -104,6 +143,7 @@
 				9E12A8166B35C6F32302F750 /* SekishoShieldConfigurationExtension.appex in Embed Foundation Extensions */,
 				8EC82AB11BA7184699C0E9CE /* SekishoShieldActionExtension.appex in Embed Foundation Extensions */,
 				74F5465855A96B4798C0670F /* SekishoDeviceActivityMonitorExtension.appex in Embed Foundation Extensions */,
+				7D06E737DDDE6BEDB8ADBFF6 /* SekishoWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,11 +163,14 @@
 
 /* Begin PBXFileReference section */
 		02F26363D661A04B88FC6476 /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
+		06F0529C2705CBE36DEBD9CB /* SekishoWidgetExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = SekishoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		07075E2FFCDB21C739B06B65 /* ScreenTimeLimitIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeLimitIdentifiers.swift; sourceTree = "<group>"; };
 		0A9669C1D7B03B00F3A8362A /* SekishoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SekishoApp.swift; sourceTree = "<group>"; };
+		0FD67E946FFF5738C3CC44BF /* SekishoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SekishoAPIClient.swift; sourceTree = "<group>"; };
 		10903960B10BF603DF761267 /* Sekisho.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Sekisho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14189C17D9E20EC0E606105B /* SharedShieldSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedShieldSnapshot.swift; sourceTree = "<group>"; };
 		16DF5CE2151BAE0947190FB4 /* ScreenTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeController.swift; sourceTree = "<group>"; };
+		176400B44BF386D57CD60A73 /* LiveSekishoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSekishoAPIClient.swift; sourceTree = "<group>"; };
 		184760B1ED09595F869DDBB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28B5A8F5D99BE5DB30A0A3F5 /* SekishoShieldConfigurationExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = SekishoShieldConfigurationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B2EF832E6CAD69AA9460A1D /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
@@ -141,8 +184,11 @@
 		52906C93CBAAEA7C2B81B3FF /* FocusSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSessionView.swift; sourceTree = "<group>"; };
 		5C0A130A924E15A4C49B7EF1 /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
 		5FB83E4D94AE8BDA00ED1EC4 /* UsageLimitSettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageLimitSettingsStore.swift; sourceTree = "<group>"; };
+		63972B58CA6C5647AB1FB353 /* SekishoAPIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SekishoAPIModels.swift; sourceTree = "<group>"; };
 		63EC3AED4CFC432847687A94 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 		67ECE048B079B78FCDB4052D /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		70FA7E5C4B5890DBB348AAE0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		78B1343405422D0295FE0743 /* SekishoWidgetSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SekishoWidgetSnapshot.swift; sourceTree = "<group>"; };
 		805A4D895D85DA423D04975A /* TodayUsageReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayUsageReportView.swift; sourceTree = "<group>"; };
 		95914DBFCC2921BF4D47746B /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		95941C0CEB177905A50A6F50 /* AppModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModels.swift; sourceTree = "<group>"; };
@@ -154,16 +200,34 @@
 		B75EDC3DF2E7A6D961EB4C34 /* TodayUsageReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayUsageReport.swift; sourceTree = "<group>"; };
 		B9BFB63279B1E69D9F507B73 /* SekishoDeviceActivityReportExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SekishoDeviceActivityReportExtension.swift; sourceTree = "<group>"; };
 		B9C3C45FF64C21B0FD040FBD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C543576471CEEEF1443D91CD /* sekisho-shield-mascot-limited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sekisho-shield-mascot-limited.png"; sourceTree = "<group>"; };
+		C6CBB46652512FD5EACAB372 /* KeychainTokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTokenStore.swift; sourceTree = "<group>"; };
+		CB01AB5464C4DBE239403665 /* BackendSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendSessionManager.swift; sourceTree = "<group>"; };
+		CF80FD138F3FA707D40B180D /* MockSekishoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSekishoAPIClient.swift; sourceTree = "<group>"; };
+		D4B4A625E030A6447EEE3466 /* TargetUsageLimitConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetUsageLimitConfiguration.swift; sourceTree = "<group>"; };
 		D4F74534F770EA6AECF73765 /* SekishoProView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SekishoProView.swift; sourceTree = "<group>"; };
+		D51D0D5849600679C07AD56E /* SekishoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SekishoWidget.swift; sourceTree = "<group>"; };
 		D5379173DC0E0B199C61EB58 /* ShieldActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldActionExtension.swift; sourceTree = "<group>"; };
+		D669B4FFA869D1131F0B962B /* WeeklyRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyRulesView.swift; sourceTree = "<group>"; };
 		D9608A51A267123FF86F9A16 /* SekishoDeviceActivityReportExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = SekishoDeviceActivityReportExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC6DD2583C4D786546345812 /* DeviceActivityReportContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityReportContext.swift; sourceTree = "<group>"; };
 		E3B493D8FBAD92D6C7FA22EF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E40B50C7E5E39EBA78D7C7C7 /* AppleSignInNonce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInNonce.swift; sourceTree = "<group>"; };
 		E49A3FA68693ED0E71FB5429 /* DefaultBlockedWebDomains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBlockedWebDomains.swift; sourceTree = "<group>"; };
 		E930353723B29188EB24FB25 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
+		FCDEBC9C4D6B388E8FAEE0D6 /* LegalDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalDocumentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3898221E7C8D7022D6C7B751 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72740CB9A1B27583A0B2C2F0 /* FamilyControls.framework in Frameworks */,
+				CDD5570AF3FD6D9538C2A388 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		62344683823AF11B67213B76 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -179,6 +243,8 @@
 			files = (
 				98389C65D1EFC512708D80C2 /* DeviceActivity.framework in Frameworks */,
 				E056C177FCDA1236DD16E873 /* ExtensionKit.framework in Frameworks */,
+				A7A338FA51393D3E2A9B5DB3 /* FamilyControls.framework in Frameworks */,
+				09249A8F66832E36F940BB35 /* ManagedSettings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +255,7 @@
 				0ACDC59A9DC8F7552C812388 /* DeviceActivity.framework in Frameworks */,
 				4F38F78A469D53FAA32C42B4 /* FamilyControls.framework in Frameworks */,
 				C8A38D600249D732B3F0FDBC /* ManagedSettings.framework in Frameworks */,
+				4780F64FE2E571CC8F08E25B /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +276,7 @@
 				29AA29E7350429F1E9A88C5F /* ManagedSettings.framework in Frameworks */,
 				8B506D201C8F27D6133F9BC4 /* DeviceActivity.framework in Frameworks */,
 				7E7DBE99BB0F6F3B4760568D /* UserNotifications.framework in Frameworks */,
+				A93438208232EFF0D59EBBE0 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +300,7 @@
 				AD268B91519169F66B0E1390 /* LocalNotificationClient.swift */,
 				2B2EF832E6CAD69AA9460A1D /* PurchaseManager.swift */,
 				16DF5CE2151BAE0947190FB4 /* ScreenTimeController.swift */,
+				C67ACB0B839CCE376E9B5E25 /* Backend */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -253,6 +322,7 @@
 				D9608A51A267123FF86F9A16 /* SekishoDeviceActivityReportExtension.appex */,
 				B19E3724E51DC8EF81EFDE7D /* SekishoShieldActionExtension.appex */,
 				28B5A8F5D99BE5DB30A0A3F5 /* SekishoShieldConfigurationExtension.appex */,
+				06F0529C2705CBE36DEBD9CB /* SekishoWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -284,6 +354,7 @@
 				5C0A130A924E15A4C49B7EF1 /* ManagedSettings.framework */,
 				3CA3B7443F5A168072FD6B6A /* ManagedSettingsUI.framework */,
 				95914DBFCC2921BF4D47746B /* UserNotifications.framework */,
+				70FA7E5C4B5890DBB348AAE0 /* WidgetKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -295,10 +366,12 @@
 				67ECE048B079B78FCDB4052D /* DesignSystem.swift */,
 				52906C93CBAAEA7C2B81B3FF /* FocusSessionView.swift */,
 				E3B493D8FBAD92D6C7FA22EF /* HomeView.swift */,
+				FCDEBC9C4D6B388E8FAEE0D6 /* LegalDocumentView.swift */,
 				B4B1F35CEF18B1358B164AE4 /* MascotWardrobeView.swift */,
 				63EC3AED4CFC432847687A94 /* RulesView.swift */,
 				D4F74534F770EA6AECF73765 /* SekishoProView.swift */,
 				B9C3C45FF64C21B0FD040FBD /* SettingsView.swift */,
+				D669B4FFA869D1131F0B962B /* WeeklyRulesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,6 +382,7 @@
 				E49A3FA68693ED0E71FB5429 /* DefaultBlockedWebDomains.swift */,
 				38645DC56E9D4FD93220D647 /* FamilyActivitySelectionStore.swift */,
 				07075E2FFCDB21C739B06B65 /* ScreenTimeLimitIdentifiers.swift */,
+				D4B4A625E030A6447EEE3466 /* TargetUsageLimitConfiguration.swift */,
 			);
 			name = SekishoScreenTimeShared;
 			path = Sources/SekishoScreenTimeShared;
@@ -325,9 +399,41 @@
 				F97C7416682FE2DEDB3F2937 /* SekishoShared */,
 				CD57FAAE00F5DB209D28E6A8 /* SekishoShieldActionExtension */,
 				F5B8DA7AB5888A55B2956890 /* SekishoShieldConfigurationExtension */,
+				A55C0AED0417648E25CEEC06 /* SekishoWidgetExtension */,
 				533C581776AE3238669B1921 /* Frameworks */,
 				2E919D28D52FC79364DE2541 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		A55C0AED0417648E25CEEC06 /* SekishoWidgetExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D51D0D5849600679C07AD56E /* SekishoWidget.swift */,
+			);
+			name = SekishoWidgetExtension;
+			path = Sources/SekishoWidgetExtension;
+			sourceTree = "<group>";
+		};
+		C2D5A1192D854EFC6C5B5666 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C543576471CEEEF1443D91CD /* sekisho-shield-mascot-limited.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C67ACB0B839CCE376E9B5E25 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				E40B50C7E5E39EBA78D7C7C7 /* AppleSignInNonce.swift */,
+				CB01AB5464C4DBE239403665 /* BackendSessionManager.swift */,
+				C6CBB46652512FD5EACAB372 /* KeychainTokenStore.swift */,
+				176400B44BF386D57CD60A73 /* LiveSekishoAPIClient.swift */,
+				CF80FD138F3FA707D40B180D /* MockSekishoAPIClient.swift */,
+				0FD67E946FFF5738C3CC44BF /* SekishoAPIClient.swift */,
+				63972B58CA6C5647AB1FB353 /* SekishoAPIModels.swift */,
+			);
+			path = Backend;
 			sourceTree = "<group>";
 		};
 		CD57FAAE00F5DB209D28E6A8 /* SekishoShieldActionExtension */ = {
@@ -356,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				377BE1FA11C1DD2117D2751D /* ShieldConfigurationExtension.swift */,
+				C2D5A1192D854EFC6C5B5666 /* Resources */,
 			);
 			name = SekishoShieldConfigurationExtension;
 			path = Sources/SekishoShieldConfigurationExtension;
@@ -364,6 +471,7 @@
 		F97C7416682FE2DEDB3F2937 /* SekishoShared */ = {
 			isa = PBXGroup;
 			children = (
+				78B1343405422D0295FE0743 /* SekishoWidgetSnapshot.swift */,
 				14189C17D9E20EC0E606105B /* SharedShieldSnapshot.swift */,
 			);
 			name = SekishoShared;
@@ -388,6 +496,7 @@
 			buildConfigurationList = 609E671E4CDA7631AA309610 /* Build configuration list for PBXNativeTarget "SekishoShieldConfigurationExtension" */;
 			buildPhases = (
 				A1DAA7BC32066C849D83F48B /* Sources */,
+				6B752D143FD15A4F75C387C6 /* Resources */,
 				62344683823AF11B67213B76 /* Frameworks */,
 			);
 			buildRules = (
@@ -454,6 +563,7 @@
 				800E9F5111EF6E719F7EF332 /* PBXTargetDependency */,
 				87EBF975F20B3DC595F6DB67 /* PBXTargetDependency */,
 				5306984672EBC1CA7F19F6FF /* PBXTargetDependency */,
+				EA2EEC8653831D0D10D7FC5E /* PBXTargetDependency */,
 			);
 			name = Sekisho;
 			packageProductDependencies = (
@@ -462,6 +572,25 @@
 			productName = Sekisho;
 			productReference = 10903960B10BF603DF761267 /* Sekisho.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5A104CCFD2DDD8B0BBE3D145 /* SekishoWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 259A912A55BC49E1C787D35E /* Build configuration list for PBXNativeTarget "SekishoWidgetExtension" */;
+			buildPhases = (
+				69E27650A41C95BCB3A16E25 /* Sources */,
+				FA91EB308B729CA56EB0A5D1 /* Resources */,
+				3898221E7C8D7022D6C7B751 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SekishoWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = SekishoWidgetExtension;
+			productReference = 06F0529C2705CBE36DEBD9CB /* SekishoWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		B0EBFC1B8881027C7CC5CC04 /* SekishoShieldActionExtension */ = {
 			isa = PBXNativeTarget;
@@ -511,6 +640,10 @@
 							};
 						};
 					};
+					5A104CCFD2DDD8B0BBE3D145 = {
+						DevelopmentTeam = UTD8GUH37B;
+						ProvisioningStyle = Automatic;
+					};
 					B0EBFC1B8881027C7CC5CC04 = {
 						DevelopmentTeam = UTD8GUH37B;
 						ProvisioningStyle = Automatic;
@@ -539,16 +672,33 @@
 				1FDB5641155E74D14EE8654E /* SekishoDeviceActivityReportExtension */,
 				B0EBFC1B8881027C7CC5CC04 /* SekishoShieldActionExtension */,
 				159CF1D15F3A1EBF50024593 /* SekishoShieldConfigurationExtension */,
+				5A104CCFD2DDD8B0BBE3D145 /* SekishoWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6B752D143FD15A4F75C387C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F39E59E7575E4FBBC602BDA7 /* sekisho-shield-mascot-limited.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78DFF74D37A13ECC41582B32 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1A12DEC3D951A0D161494D8D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA91EB308B729CA56EB0A5D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDB04F2EBDBD1D3491712810 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +709,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A479BAB5B92ABDD2646DF28 /* SekishoWidgetSnapshot.swift in Sources */,
 				1B3EC3D614A4FE1AAA14106F /* SharedShieldSnapshot.swift in Sources */,
 				9B89B05118C25FC827971D15 /* ShieldActionExtension.swift in Sources */,
 			);
@@ -571,24 +722,47 @@
 				3C0EDAA42EA3BFC3953543A6 /* AppModel.swift in Sources */,
 				ABF44B1FAED9264DB56967CC /* AppModels.swift in Sources */,
 				6B01D48201D59FF609189E26 /* AppRootView.swift in Sources */,
+				8781091297F760D30CA49678 /* AppleSignInNonce.swift in Sources */,
+				3744EB51191B0EBF8FB1F67C /* BackendSessionManager.swift in Sources */,
 				43926D5BF03832226490E5B3 /* DefaultBlockedWebDomains.swift in Sources */,
 				494706E58F193C01983F1F4A /* DesignSystem.swift in Sources */,
 				95F65F1E109D3C73B20833B8 /* DeviceActivityReportContext.swift in Sources */,
 				85956B50B65DA79217DFA67C /* FamilyActivitySelectionStore.swift in Sources */,
 				05987799460E435C916A55E6 /* FocusSessionView.swift in Sources */,
 				D2D1B541F60DCA9C8E4DD06F /* HomeView.swift in Sources */,
+				87F33F5BA3F050F62C167D99 /* KeychainTokenStore.swift in Sources */,
+				9A6B26A30DBB662A21AC94C6 /* LegalDocumentView.swift in Sources */,
+				62ACC75BA84F58DD3DD67FE6 /* LiveSekishoAPIClient.swift in Sources */,
 				87199F938F18CD91F8F7AA32 /* LocalNotificationClient.swift in Sources */,
 				27D915ADA5209C840D31BB58 /* MascotStyle.swift in Sources */,
 				85586BA4F09EA1C83F922A52 /* MascotWardrobeView.swift in Sources */,
+				95AA1E586BA260754DCD5883 /* MockSekishoAPIClient.swift in Sources */,
 				D90C0607113651EFAE813A96 /* PurchaseManager.swift in Sources */,
 				CBF2802EB42AB64B04F90376 /* RulesView.swift in Sources */,
 				D3C01E3D671F4883131992E5 /* ScreenTimeController.swift in Sources */,
 				5572532096E100FB9201889B /* ScreenTimeLimitIdentifiers.swift in Sources */,
+				1AD38B9C14931A1AA3F499A8 /* SekishoAPIClient.swift in Sources */,
+				799A45423B1A299FF9AC8A94 /* SekishoAPIModels.swift in Sources */,
 				9D1365797398547D9FBD0B14 /* SekishoApp.swift in Sources */,
 				DA53C84CB7775C9F710EF95A /* SekishoProView.swift in Sources */,
+				D819A9EBF043BAC298E9E8DA /* SekishoWidgetSnapshot.swift in Sources */,
 				548A76FBBEE60774FFAAA3C7 /* SettingsView.swift in Sources */,
 				3EE90A62B928F36B53966C56 /* SharedShieldSnapshot.swift in Sources */,
+				AB72D3D219511EC0FB5CEE47 /* TargetUsageLimitConfiguration.swift in Sources */,
 				C05E1C3E0345EAE0BF836C41 /* UsageLimitSettingsStore.swift in Sources */,
+				E08A72E5B81CD5AA337158EF /* WeeklyRulesView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69E27650A41C95BCB3A16E25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D2814D7016DB6F64C011241 /* FamilyActivitySelectionStore.swift in Sources */,
+				F87257CE4D74514A28277A4C /* ScreenTimeLimitIdentifiers.swift in Sources */,
+				746D2E33E5F5A642879B8D8A /* SekishoWidget.swift in Sources */,
+				8941D672743A9C064E64BE1E /* SekishoWidgetSnapshot.swift in Sources */,
+				17D882AF35F57FE0B749E847 /* SharedShieldSnapshot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,8 +771,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C2F199E2364BEC7B063FC3A /* DeviceActivityReportContext.swift in Sources */,
+				87A1D7131051B62A5C91CA69 /* FamilyActivitySelectionStore.swift in Sources */,
 				C533F49DBAC770CE4E356E0F /* ScreenTimeLimitIdentifiers.swift in Sources */,
 				D6724A13E77EB29166E4BD06 /* SekishoDeviceActivityReportExtension.swift in Sources */,
+				A9C525D0E2598BB3C19F98D6 /* SharedShieldSnapshot.swift in Sources */,
+				B09DA9FEC829530A76C92AA7 /* TargetUsageLimitConfiguration.swift in Sources */,
 				01EE84D572D7CC2965D8E25D /* TodayUsageReport.swift in Sources */,
 				5A47A258FD46121B5AA49A58 /* TodayUsageReportView.swift in Sources */,
 				62E0607581F7541CF704806B /* UsageLimitSettingsStore.swift in Sources */,
@@ -609,6 +786,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A91A905A8CC8A8B3060CE9 /* SekishoWidgetSnapshot.swift in Sources */,
 				DABAF954B4DD70BCC5C7AB8C /* SharedShieldSnapshot.swift in Sources */,
 				381C078AAAF666F1EF93A28B /* ShieldConfigurationExtension.swift in Sources */,
 			);
@@ -622,7 +800,9 @@
 				E1921D445A5A4849D832FC47 /* DeviceActivityMonitorExtension.swift in Sources */,
 				48AFEED71FD658B2D053AB54 /* FamilyActivitySelectionStore.swift in Sources */,
 				9E01B0F044A522D72EBC977F /* ScreenTimeLimitIdentifiers.swift in Sources */,
+				5C5A7314D871234FF9B13711 /* SekishoWidgetSnapshot.swift in Sources */,
 				858B19CB5167454B1CCAEEA3 /* SharedShieldSnapshot.swift in Sources */,
+				5BC07AF5872875D1015453D1 /* TargetUsageLimitConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,6 +828,11 @@
 			isa = PBXTargetDependency;
 			target = 159CF1D15F3A1EBF50024593 /* SekishoShieldConfigurationExtension */;
 			targetProxy = 1C10A576AC15B78A14F468F9 /* PBXContainerItemProxy */;
+		};
+		EA2EEC8653831D0D10D7FC5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A104CCFD2DDD8B0BBE3D145 /* SekishoWidgetExtension */;
+			targetProxy = C7BCDA5D434D48A1748E8003 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -705,7 +890,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2026081102;
+				CURRENT_PROJECT_VERSION = 2026081607;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = UTD8GUH37B;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -730,7 +915,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REVENUECAT_API_KEY = "";
+				REVENUECAT_API_KEY = appl_AYhoDusfsplgENvHvizMRtCTekn;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -792,7 +977,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2026081102;
+				CURRENT_PROJECT_VERSION = 2026081607;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = UTD8GUH37B;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -810,7 +995,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REVENUECAT_API_KEY = "";
+				REVENUECAT_API_KEY = appl_AYhoDusfsplgENvHvizMRtCTekn;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -831,6 +1016,23 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.onikun94.sekisho;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8F6FBE33D8D18EDD517A6465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/SekishoWidgetExtension.entitlements;
+				INFOPLIST_FILE = "Config/SekishoWidgetExtension-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.onikun94.sekisho.widget;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -903,6 +1105,23 @@
 			};
 			name = Release;
 		};
+		B21812C82FFF7F67303403D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/SekishoWidgetExtension.entitlements;
+				INFOPLIST_FILE = "Config/SekishoWidgetExtension-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.onikun94.sekisho.widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		C5A5ACBFAC02A618A2B615CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -956,6 +1175,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		259A912A55BC49E1C787D35E /* Build configuration list for PBXNativeTarget "SekishoWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B21812C82FFF7F67303403D6 /* Debug */,
+				8F6FBE33D8D18EDD517A6465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		3FF4010C836CEAB37F957479 /* Build configuration list for PBXNativeTarget "SekishoDeviceActivityReportExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

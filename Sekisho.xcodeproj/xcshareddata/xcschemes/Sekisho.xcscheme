@@ -77,6 +77,20 @@
                ReferencedContainer = "container:Sekisho.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5A104CCFD2DDD8B0BBE3D145"
+               BuildableName = "SekishoWidgetExtension.appex"
+               BlueprintName = "SekishoWidgetExtension"
+               ReferencedContainer = "container:Sekisho.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
