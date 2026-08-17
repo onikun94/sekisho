@@ -1,0 +1,76 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // トップレベル = development 環境。production は env.production で上書きする。
+  "name": "sekisho-api-dev",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-01",
+  "workers_dev": true,
+  "observability": { "enabled": true },
+  "vars": {
+    "ENVIRONMENT": "development",
+    "APPLE_BUNDLE_ID": "com.onikun94.sekisho"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "sekisho-db-dev",
+      // 作成コマンド(要ユーザー承認・APAC location hint):
+      //   wrangler d1 create sekisho-db-dev --location=apac
+      // 作成後に返る database_id で置き換える。ローカル開発・テストはこのままで動く。
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+  // 連打抑制(計画§7: 正確な利用回数管理には使わずD1で行う)。
+  // AUTH_ = 認証前(IPキー)、USER_ = 認証後(ユーザーIDキー)。
+  "unsafe": {
+    "bindings": [
+      {
+        "name": "AUTH_RATE_LIMITER",
+        "type": "ratelimit",
+        "namespace_id": "1101",
+        "simple": { "limit": 10, "period": 60 }
+      },
+      {
+        "name": "USER_RATE_LIMITER",
+        "type": "ratelimit",
+        "namespace_id": "1102",
+        "simple": { "limit": 120, "period": 60 }
+      }
+    ]
+  },
+  "env": {
+    "production": {
+      "name": "sekisho-api",
+      "vars": {
+        "ENVIRONMENT": "production",
+        "APPLE_BUNDLE_ID": "com.onikun94.sekisho"
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "sekisho-db",
+          // wrangler d1 create sekisho-db --location=apac の結果で置き換える。
+          "database_id": "00000000-0000-0000-0000-000000000000",
+          "migrations_dir": "migrations"
+        }
+      ],
+      "unsafe": {
+        "bindings": [
+          {
+            "name": "AUTH_RATE_LIMITER",
+            "type": "ratelimit",
+            "namespace_id": "2101",
+            "simple": { "limit": 10, "period": 60 }
+          },
+          {
+            "name": "USER_RATE_LIMITER",
+            "type": "ratelimit",
+            "namespace_id": "2102",
+            "simple": { "limit": 120, "period": 60 }
+          }
+        ]
+      }
+    }
+  }
+}

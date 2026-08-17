@@ -1,0 +1,10 @@
+# ローカル開発用シークレット。コピーして .dev.vars を作成する(.dev.vars はコミットしない)。
+# 本番は wrangler secret put <NAME> --env production で登録する。
+
+# アクセストークン(JWT HS256)署名鍵。openssl rand -base64 48 などで生成する。
+AUTH_JWT_SECRET=dev-only-secret-change-me
+
+# Sign in with Apple のトークン交換・失効処理用(未設定でもサインイン検証は動作する)。
+# APPLE_TEAM_ID=UTD8GUH37B
+# APPLE_KEY_ID=XXXXXXXXXX
+# APPLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----"
