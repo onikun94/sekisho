@@ -1,18 +1,52 @@
 import SwiftUI
+import UIKit
 
 extension Color {
-    // Sampled from the generated illustration corners so artwork and canvas
-    // read as one continuous field instead of an image placed on a card.
-    static let sekishoPaper = Color(red: 250 / 255, green: 243 / 255, blue: 230 / 255)
-    static let sekishoInk = Color(red: 0.22, green: 0.18, blue: 0.15)
-    static let sekishoVermilion = Color(red: 0.72, green: 0.27, blue: 0.20)
-    static let sekishoSage = Color(red: 0.38, green: 0.47, blue: 0.35)
-    static let sekishoSand = Color(red: 0.72, green: 0.61, blue: 0.46)
+    // The light values are sampled from the mascot artwork. Dark variants keep
+    // the same warm paper-and-ink character without forcing a light interface.
+    static let sekishoPaper = adaptiveColor(
+        light: UIColor(red: 250 / 255, green: 243 / 255, blue: 230 / 255, alpha: 1),
+        dark: UIColor(red: 0.12, green: 0.10, blue: 0.09, alpha: 1)
+    )
+    static let sekishoInk = adaptiveColor(
+        light: UIColor(red: 0.22, green: 0.18, blue: 0.15, alpha: 1),
+        dark: UIColor(red: 0.96, green: 0.91, blue: 0.84, alpha: 1)
+    )
+    static let sekishoVermilion = adaptiveColor(
+        light: UIColor(red: 0.72, green: 0.27, blue: 0.20, alpha: 1),
+        dark: UIColor(red: 0.92, green: 0.42, blue: 0.32, alpha: 1)
+    )
+    static let sekishoSage = adaptiveColor(
+        light: UIColor(red: 0.38, green: 0.47, blue: 0.35, alpha: 1),
+        dark: UIColor(red: 0.58, green: 0.72, blue: 0.54, alpha: 1)
+    )
+    static let sekishoSand = adaptiveColor(
+        light: UIColor(red: 0.72, green: 0.61, blue: 0.46, alpha: 1),
+        dark: UIColor(red: 0.84, green: 0.70, blue: 0.50, alpha: 1)
+    )
+    static let sekishoOnAccent = adaptiveColor(
+        light: UIColor(red: 250 / 255, green: 243 / 255, blue: 230 / 255, alpha: 1),
+        dark: UIColor(red: 0.12, green: 0.10, blue: 0.09, alpha: 1)
+    )
+    static let sekishoCardSurface = adaptiveColor(
+        light: UIColor(red: 1, green: 0.99, blue: 0.96, alpha: 0.72),
+        dark: UIColor(red: 0.20, green: 0.17, blue: 0.15, alpha: 0.94)
+    )
+    static let sekishoSecondaryInk = sekishoInk.opacity(0.72)
 
     static let limitBackground = sekishoPaper
     static let limitBlue = sekishoVermilion
     static let limitGreen = sekishoSage
-    static let limitRed = Color(red: 0.70, green: 0.20, blue: 0.16)
+    static let limitRed = adaptiveColor(
+        light: UIColor(red: 0.70, green: 0.20, blue: 0.16, alpha: 1),
+        dark: UIColor(red: 0.98, green: 0.39, blue: 0.32, alpha: 1)
+    )
+
+    private static func adaptiveColor(light: UIColor, dark: UIColor) -> Color {
+        Color(uiColor: UIColor { traits in
+            traits.userInterfaceStyle == .dark ? dark : light
+        })
+    }
 }
 
 struct CardContainer<Content: View>: View {
@@ -63,7 +97,7 @@ struct AirySection<Content: View>: View {
         VStack(alignment: .leading, spacing: 14) {
             Text(title)
                 .font(.subheadline.weight(.semibold))
-                .foregroundStyle(Color.sekishoInk.opacity(0.64))
+                .foregroundStyle(Color.sekishoSecondaryInk)
 
             content
                 .padding(.vertical, 18)
@@ -81,7 +115,7 @@ struct AiryPrimaryButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(.headline)
-            .foregroundStyle(Color.sekishoPaper)
+            .foregroundStyle(Color.sekishoOnAccent)
             .frame(maxWidth: .infinity, minHeight: 56)
             .background(
                 Color.sekishoInk.opacity(configuration.isPressed ? 0.76 : 1),
@@ -93,16 +127,27 @@ struct AiryPrimaryButtonStyle: ButtonStyle {
 }
 
 struct HandwrittenAssetText: View {
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+
     var assetName: String
     var label: String
     var height: CGFloat
 
     var body: some View {
-        Image(assetName)
-            .resizable()
-            .scaledToFit()
-            .frame(height: height)
-            .accessibilityLabel(label)
+        Group {
+            if dynamicTypeSize.isAccessibilitySize {
+                Text(label)
+                    .font(.largeTitle.weight(.medium))
+            } else {
+                Image(assetName)
+                    .renderingMode(.template)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: height)
+            }
+        }
+        .foregroundStyle(Color.sekishoInk)
+        .accessibilityLabel(label)
     }
 }
 
@@ -361,7 +406,7 @@ struct WoodenPrimaryButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(.headline)
-            .foregroundStyle(Color.sekishoPaper)
+            .foregroundStyle(Color.sekishoOnAccent)
             .frame(maxWidth: .infinity, minHeight: 56)
             .background(
                 Color(red: 0.39, green: 0.24, blue: 0.15)

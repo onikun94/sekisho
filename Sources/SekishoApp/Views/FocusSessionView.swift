@@ -53,7 +53,7 @@ struct FocusSessionView: View {
                         .frame(maxWidth: .infinity, minHeight: 50)
                 }
                 .buttonStyle(.bordered)
-                .tint(Color.sekishoInk.opacity(0.68))
+                .tint(Color.sekishoSecondaryInk)
             }
             .padding(24)
             .background(Color.sekishoPaper)

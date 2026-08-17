@@ -7,20 +7,42 @@ final class PurchaseManager: ObservableObject {
     static let premiumEntitlementID = "premium"
     static let sakuraEntitlementID = "mascot_sakura"
     static let mascotOfferingID = "mascots"
+    static let monthlyProductID = "com.onikun94.sekisho.pro.monthly"
+    static let annualProductID = "com.onikun94.sekisho.pro.annual"
+    static let sakuraProductID = "com.onikun94.sekisho.mascot.sakura"
 
     @Published private(set) var isConfigured = false
     @Published private(set) var isLoading = false
     @Published private(set) var isPurchasing = false
-    @Published private(set) var isPremium = false
+    @Published private var storePremiumEntitlementActive = false
     @Published private(set) var ownsSakura = false
     @Published private(set) var annualPackage: Package?
     @Published private(set) var monthlyPackage: Package?
     @Published private(set) var sakuraPackage: Package?
+    @Published private(set) var introEligibilityByProductID: [String: IntroEligibilityStatus] = [:]
     @Published var message: String?
+
+    #if DEBUG || INTERNAL_TESTING
+    @Published private var developerPremiumOverride: Bool?
+    private static let developerPremiumOverrideKey = "developerPremiumOverride.v1"
+    #endif
 
     private static var didConfigureSDK = false
 
     init(configureSDK: Bool = true) {
+        #if DEBUG || INTERNAL_TESTING
+        if UserDefaults.standard.object(forKey: Self.developerPremiumOverrideKey) != nil {
+            developerPremiumOverride = UserDefaults.standard.bool(
+                forKey: Self.developerPremiumOverrideKey
+            )
+        } else {
+            // Existing internal builds exposed the individual-limit flow from
+            // the developer menu. Start those testers in the equivalent Pro
+            // state; the new toggle can still switch to the Free behavior.
+            developerPremiumOverride = true
+        }
+        #endif
+
         guard configureSDK else {
             return
         }
@@ -29,19 +51,85 @@ final class PurchaseManager: ObservableObject {
     }
 
     var annualPrice: String {
-        annualPackage?.storeProduct.localizedPriceString ?? "¥3,800"
+        annualPackage?.storeProduct.localizedPriceString ?? "価格を取得中"
     }
 
     var monthlyPrice: String {
-        monthlyPackage?.storeProduct.localizedPriceString ?? "¥480"
+        monthlyPackage?.storeProduct.localizedPriceString ?? "価格を取得中"
     }
 
     var sakuraPrice: String {
-        sakuraPackage?.storeProduct.localizedPriceString ?? "¥300"
+        sakuraPackage?.storeProduct.localizedPriceString ?? "価格を取得中"
+    }
+
+    var annualSavingsPercentage: Int? {
+        guard let annualPrice = annualPackage?.storeProduct.price,
+              let monthlyPrice = monthlyPackage?.storeProduct.price
+        else {
+            return nil
+        }
+
+        let annual = NSDecimalNumber(decimal: annualPrice).doubleValue
+        let monthlyForYear = NSDecimalNumber(decimal: monthlyPrice).doubleValue * 12
+        guard monthlyForYear > 0, annual < monthlyForYear else {
+            return nil
+        }
+
+        return Int(((1 - annual / monthlyForYear) * 100).rounded())
     }
 
     var canUseSakura: Bool {
         isPremium || ownsSakura
+    }
+
+    var isPremium: Bool {
+        #if DEBUG || INTERNAL_TESTING
+        return developerPremiumOverride ?? storePremiumEntitlementActive
+        #else
+        return storePremiumEntitlementActive
+        #endif
+    }
+
+    #if DEBUG || INTERNAL_TESTING
+    func setDeveloperPremiumMode(_ isEnabled: Bool) {
+        developerPremiumOverride = isEnabled
+        UserDefaults.standard.set(isEnabled, forKey: Self.developerPremiumOverrideKey)
+    }
+    #endif
+
+    func isEligibleForFreeTrial(_ package: Package?) -> Bool {
+        guard let package,
+              package.storeProduct.introductoryDiscount?.paymentMode == .freeTrial
+        else {
+            return false
+        }
+
+        return introEligibilityByProductID[package.storeProduct.productIdentifier]?.isEligible == true
+    }
+
+    func freeTrialPeriodText(_ package: Package?) -> String? {
+        guard isEligibleForFreeTrial(package),
+              let discount = package?.storeProduct.introductoryDiscount
+        else {
+            return nil
+        }
+
+        let totalUnits = discount.subscriptionPeriod.value * max(discount.numberOfPeriods, 1)
+        let unit: String
+        switch discount.subscriptionPeriod.unit {
+        case .day:
+            unit = "日間"
+        case .week:
+            unit = "週間"
+        case .month:
+            unit = "か月間"
+        case .year:
+            unit = "年間"
+        @unknown default:
+            return nil
+        }
+
+        return "\(totalUnits)\(unit)"
     }
 
     func refresh() {
@@ -61,8 +149,9 @@ final class PurchaseManager: ObservableObject {
                     self.sakuraPackage = offerings.all[Self.mascotOfferingID]?
                         .availablePackages
                         .first(where: {
-                            $0.storeProduct.productIdentifier == Self.sakuraEntitlementID
+                            $0.storeProduct.productIdentifier == Self.sakuraProductID
                         })
+                    self.refreshIntroEligibility()
                 } else if let error {
                     self.message = error.localizedDescription
                 }
@@ -159,7 +248,25 @@ final class PurchaseManager: ObservableObject {
     }
 
     private func apply(_ customerInfo: CustomerInfo) {
-        isPremium = customerInfo.entitlements[Self.premiumEntitlementID]?.isActive == true
+        storePremiumEntitlementActive = customerInfo.entitlements[Self.premiumEntitlementID]?.isActive == true
         ownsSakura = customerInfo.entitlements[Self.sakuraEntitlementID]?.isActive == true
+    }
+
+    private func refreshIntroEligibility() {
+        let productIdentifiers = [annualPackage, monthlyPackage]
+            .compactMap { $0?.storeProduct.productIdentifier }
+
+        guard !productIdentifiers.isEmpty else {
+            introEligibilityByProductID = [:]
+            return
+        }
+
+        Purchases.shared.checkTrialOrIntroDiscountEligibility(
+            productIdentifiers: productIdentifiers
+        ) { [weak self] eligibility in
+            Task { @MainActor in
+                self?.introEligibilityByProductID = eligibility.mapValues(\.status)
+            }
+        }
     }
 }

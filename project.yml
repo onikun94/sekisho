@@ -7,7 +7,7 @@ options:
 
 settings:
   base:
-    CURRENT_PROJECT_VERSION: 2026081102
+    CURRENT_PROJECT_VERSION: 2026081607
     MARKETING_VERSION: 0.1.0
     SWIFT_VERSION: 5.0
     IPHONEOS_DEPLOYMENT_TARGET: 17.0
@@ -15,7 +15,7 @@ settings:
     ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
     DEVELOPMENT_TEAM: UTD8GUH37B
     CODE_SIGN_STYLE: Automatic
-    REVENUECAT_API_KEY: ""
+    REVENUECAT_API_KEY: "appl_AYhoDusfsplgENvHvizMRtCTekn"
 
 packages:
   RevenueCat:
@@ -38,6 +38,7 @@ targets:
       - sdk: ManagedSettings.framework
       - sdk: DeviceActivity.framework
       - sdk: UserNotifications.framework
+      - sdk: WidgetKit.framework
       - target: SekishoShieldConfigurationExtension
         embed: true
         codeSign: true
@@ -48,6 +49,9 @@ targets:
         embed: true
         codeSign: true
       - target: SekishoDeviceActivityReportExtension
+        embed: true
+        codeSign: true
+      - target: SekishoWidgetExtension
         embed: true
         codeSign: true
     settings:
@@ -102,6 +106,7 @@ targets:
       - sdk: DeviceActivity.framework
       - sdk: FamilyControls.framework
       - sdk: ManagedSettings.framework
+      - sdk: WidgetKit.framework
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.onikun94.sekisho.device-activity-monitor
@@ -113,17 +118,41 @@ targets:
     type: extensionkit-extension
     platform: iOS
     sources:
+      - path: Sources/SekishoShared/SharedShieldSnapshot.swift
       - path: Sources/SekishoScreenTimeShared/ScreenTimeLimitIdentifiers.swift
+      - path: Sources/SekishoScreenTimeShared/FamilyActivitySelectionStore.swift
+      - path: Sources/SekishoScreenTimeShared/TargetUsageLimitConfiguration.swift
       - path: Sources/SekishoDeviceActivityReportShared
       - path: Sources/SekishoDeviceActivityReportExtension
     dependencies:
       - sdk: DeviceActivity.framework
       - sdk: ExtensionKit.framework
+      - sdk: FamilyControls.framework
+      - sdk: ManagedSettings.framework
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.onikun94.sekisho.device-activity-report
         INFOPLIST_FILE: Config/SekishoDeviceActivityReportExtension-Info.plist
         CODE_SIGN_ENTITLEMENTS: Config/SekishoDeviceActivityReportExtension.entitlements
+        APPLICATION_EXTENSION_API_ONLY: YES
+
+  SekishoWidgetExtension:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: Sources/SekishoShared
+      - path: Sources/SekishoScreenTimeShared/ScreenTimeLimitIdentifiers.swift
+      - path: Sources/SekishoScreenTimeShared/FamilyActivitySelectionStore.swift
+      - path: Sources/SekishoApp/Resources/Assets.xcassets
+      - path: Sources/SekishoWidgetExtension
+    dependencies:
+      - sdk: FamilyControls.framework
+      - sdk: WidgetKit.framework
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.onikun94.sekisho.widget
+        INFOPLIST_FILE: Config/SekishoWidgetExtension-Info.plist
+        CODE_SIGN_ENTITLEMENTS: Config/SekishoWidgetExtension.entitlements
         APPLICATION_EXTENSION_API_ONLY: YES
 
 schemes:
@@ -135,6 +164,7 @@ schemes:
         SekishoShieldActionExtension: all
         SekishoDeviceActivityMonitorExtension: all
         SekishoDeviceActivityReportExtension: all
+        SekishoWidgetExtension: all
     run:
       config: Debug
     test:

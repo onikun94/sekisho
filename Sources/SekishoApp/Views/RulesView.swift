@@ -4,6 +4,7 @@ import SwiftUI
 struct RulesView: View {
     @EnvironmentObject private var model: AppModel
     @State private var isPickerPresented = false
+    @State private var draftSelection = FamilyActivitySelection()
 
     var body: some View {
         NavigationStack {
@@ -20,7 +21,7 @@ struct RulesView: View {
                             HStack {
                                 Image(systemName: model.selectedTokenCount > 0 ? "checkmark.circle" : "circle.dashed")
                                     .font(.title2)
-                                    .foregroundStyle(model.selectedTokenCount > 0 ? Color.sekishoSage : Color.sekishoInk.opacity(0.38))
+                                    .foregroundStyle(model.selectedTokenCount > 0 ? Color.sekishoSage : Color.sekishoSecondaryInk)
 
                                 Spacer()
 
@@ -30,6 +31,7 @@ struct RulesView: View {
                             }
 
                             Button {
+                                draftSelection = model.selectedApps
                                 isPickerPresented = true
                             } label: {
                                 HandwrittenAssetText(
@@ -41,7 +43,13 @@ struct RulesView: View {
                             }
                             .buttonStyle(.bordered)
                             .tint(Color.sekishoInk)
+                            .disabled(model.areTargetsLockedToday)
                             .accessibilityLabel("対象を変更")
+                            .accessibilityHint(
+                                model.areTargetsLockedToday
+                                    ? "見守り開始後のため変更できません"
+                                    : "ダブルタップして対象を変更します"
+                            )
                         }
                     }
 
@@ -61,6 +69,12 @@ struct RulesView: View {
                                 .labelsHidden()
                                 .tint(Color.sekishoSage)
                                 .frame(minHeight: 44)
+                                .disabled(model.isDailyConfigurationLocked)
+                                .accessibilityHint(
+                                    model.isDailyConfigurationLocked
+                                        ? "見守り中のため変更できません"
+                                        : "1日の上限を5分単位で変更します"
+                                )
                         }
                     }
                 }
@@ -75,8 +89,14 @@ struct RulesView: View {
                 headerText: "制限したいアプリやWebサイトを選びます。",
                 footerText: "選択内容は端末内に保存されます。",
                 isPresented: $isPickerPresented,
-                selection: $model.selectedApps
+                selection: $draftSelection
             )
+            .onChange(of: isPickerPresented) { wasPresented, isPresented in
+                if wasPresented, !isPresented {
+                    model.updateSelectedApps(draftSelection)
+                    model.ensureUsageLimitMonitoring()
+                }
+            }
         }
     }
 }

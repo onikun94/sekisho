@@ -12,14 +12,35 @@ enum SharedBarrierState: String, Codable {
     case emergencyUsed
 }
 
+enum ShieldLockScope: String, Codable {
+    case combined
+    case individual
+}
+
 struct ShieldSnapshot: Codable {
     var barrierState: SharedBarrierState
     var updatedAt: Date
+    var lockScope: ShieldLockScope?
+
+    init(
+        barrierState: SharedBarrierState,
+        updatedAt: Date,
+        lockScope: ShieldLockScope? = nil
+    ) {
+        self.barrierState = barrierState
+        self.updatedAt = updatedAt
+        self.lockScope = lockScope
+    }
 
     static let fallback = ShieldSnapshot(
-        barrierState: .locked,
-        updatedAt: Date()
+        barrierState: .passed,
+        updatedAt: Date(),
+        lockScope: nil
     )
+
+    func isLockedToday(at date: Date = .now) -> Bool {
+        barrierState == .locked && Calendar.current.isDate(updatedAt, inSameDayAs: date)
+    }
 }
 
 enum SharedShieldStore {
@@ -28,6 +49,7 @@ enum SharedShieldStore {
     }
 
     static func readSnapshot() -> ShieldSnapshot {
+        defaults.synchronize()
         guard let data = defaults.data(forKey: SekishoShared.shieldSnapshotKey),
               let snapshot = try? JSONDecoder().decode(ShieldSnapshot.self, from: data)
         else {
@@ -43,5 +65,6 @@ enum SharedShieldStore {
         }
 
         defaults.set(data, forKey: SekishoShared.shieldSnapshotKey)
+        defaults.synchronize()
     }
 }

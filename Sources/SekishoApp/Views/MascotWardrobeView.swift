@@ -2,6 +2,7 @@ import SwiftUI
 
 struct MascotWardrobeView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @EnvironmentObject private var purchaseManager: PurchaseManager
     @AppStorage("selectedMascotStyle") private var selectedMascotStyle = MascotStyle.standard.rawValue
     @State private var previewStyle: MascotStyle = .standard
@@ -26,7 +27,7 @@ struct MascotWardrobeView: View {
                     .id(previewStyle)
                     .transition(.opacity)
                 }
-                .frame(height: 310)
+                .frame(height: dynamicTypeSize.isAccessibilitySize ? 210 : 310)
                 .animation(.easeInOut(duration: 0.2), value: previewStyle)
 
                 Text(previewStyle.fullTitle)
@@ -34,7 +35,7 @@ struct MascotWardrobeView: View {
 
                 Text(styleDescription)
                     .font(.subheadline)
-                    .foregroundStyle(Color.sekishoInk.opacity(0.62))
+                    .foregroundStyle(Color.sekishoSecondaryInk)
                     .multilineTextAlignment(.center)
                     .padding(.top, 6)
 
@@ -55,7 +56,7 @@ struct MascotWardrobeView: View {
                     HStack(spacing: 10) {
                         if purchaseManager.isPurchasing {
                             ProgressView()
-                                .tint(Color.sekishoPaper)
+                                .tint(Color.sekishoOnAccent)
                         }
 
                         Text(primaryButtonLabel)
@@ -97,7 +98,7 @@ struct MascotWardrobeView: View {
                     purchaseManager.restorePurchases()
                 }
                 .font(.footnote.weight(.semibold))
-                .foregroundStyle(Color.sekishoInk.opacity(0.68))
+                .foregroundStyle(Color.sekishoSecondaryInk)
                 .frame(minHeight: 44)
                 .padding(.top, 4)
             }
@@ -198,6 +199,7 @@ struct WardrobeHeader: View {
 
             Text(title)
                 .font(.title2.weight(.bold))
+                .fixedSize(horizontal: false, vertical: true)
 
             Spacer()
         }
@@ -226,13 +228,13 @@ private struct MascotStyleCard: View {
                     .foregroundStyle(
                         style == .sakura && priceText != "購入済み"
                             ? Color.sekishoVermilion
-                            : Color.sekishoInk.opacity(0.58)
+                            : Color.sekishoSecondaryInk
                     )
             }
             .foregroundStyle(Color.sekishoInk)
             .frame(maxWidth: .infinity, minHeight: 148)
             .padding(.vertical, 12)
-            .background(Color.white.opacity(0.26), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+            .background(Color.sekishoCardSurface, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
             .overlay {
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
                     .stroke(

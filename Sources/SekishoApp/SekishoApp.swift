@@ -13,8 +13,11 @@ struct SekishoApp: App {
                 .environmentObject(purchaseManager)
                 .onChange(of: scenePhase) { _, newPhase in
                     if newPhase == .active {
-                        model.refreshUsageLimitState()
-                        purchaseManager.refresh()
+                        Task {
+                            await model.restoreScreenTimeAuthorizationIfNeeded()
+                            model.refreshUsageLimitState()
+                            purchaseManager.refresh()
+                        }
                     }
                 }
         }

@@ -26,17 +26,25 @@
     <false/>
     <key>RevenueCatAPIKey</key>
     <string>$(REVENUECAT_API_KEY)</string>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLName</key>
-            <string>com.onikun94.sekisho</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>sekisho</string>
-            </array>
-        </dict>
-    </array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.onikun94.sekisho</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>sekisho</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>RevenueCat Paywall Preview</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>rc-87148e8f08</string>
+			</array>
+		</dict>
+	</array>
     <key>UILaunchScreen</key>
     <dict/>
     <key>UISupportedInterfaceOrientations</key>
