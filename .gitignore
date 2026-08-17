@@ -8,3 +8,4 @@ xcuserdata/
 *.xcuserstate
 *.ipa
 *.dSYM.zip
+.codex-audit/
